@@ -1,0 +1,102 @@
+.mahdis {
+  font-weight: 100;
+  font-size: 1.5rem;
+  font-family: "Comic Sans MS", sans-serif;
+  letter-spacing: 2px;
+}
+.fa-bars {
+  font-size: 1.2rem;
+}
+.nav-item {
+  text-align: center;
+  width: 5rem;
+  border-right: 1px solid #000;
+  @media (max-width: 768px) {
+    border-right: none;
+    width: auto;
+    text-align: center;
+  }
+}
+
+.nav-item:last-child {
+  border-right: none;
+}
+
+.nav-link.active {
+  color: #2d807c;
+}
+
+.nav-link:hover {
+  color: #2d807c;
+}
+
+.btn i {
+  font-size: 24px;
+}
+
+.icon-light {
+  color: rgb(255, 0, 0);
+}
+
+.icon-dark {
+  color: green;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .nav-item {
+    margin-bottom: 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-link {
+    font-size: 16px;
+  }
+
+  .mahdis {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .navbar-toggler {
+    position: absolute;
+    right: 0;
+  }
+
+  .btn {
+    margin-left: 10px;
+  }
+}
+.btn-primary {
+  background-color: #d9ab2c;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ca9605;
+  }
+}

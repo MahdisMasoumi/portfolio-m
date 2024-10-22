@@ -1,0 +1,117 @@
+body {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+.dark-theme {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+
+  .navbar {
+    color: rgb(255, 255, 255);
+  }
+
+  .nav-link {
+    color: #f8f9fa !important;
+  }
+  .nav-item {
+    border-right: 1px solid #ffffff !important;
+  }
+
+  .nav-link.active {
+    color: #ff0000 !important;
+  }
+  .btn-outline-dark {
+    color: #343a40 !important;
+  }
+
+  .about-me-text {
+    color: #f8f9fa !important;
+  }
+
+  .navbar-brand {
+    color: #ffffff;
+  }
+
+  .about-page {
+    color: red;
+    .about {
+      .profile-image {
+        border: 5px solid red;
+        filter: brightness(0.6);
+        transition: filter 0.3s;
+      }
+      .cartoon-font {
+        color: rgb(255, 255, 255);
+      }
+      .cartoon-text {
+        color: rgb(255, 255, 255);
+      }
+      .profile-image:hover {
+        filter: brightness(0.9);
+      }
+    }
+
+    hr {
+      border-color: red;
+    }
+
+    .skills {
+      .h3 {
+        color: #ffffff;
+      }
+      .soft {
+        color: #ffffff;
+      }
+      .icon-container {
+        i {
+          color: rgb(255, 255, 255);
+          transition: transform 0.3s;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+      .icon-label {
+        color: rgb(255, 255, 255);
+      }
+    }
+  }
+  .social-icons {
+    .icon-link {
+      color: #ffffff !important;
+      &:hover {
+        color: #ff0000 !important;
+      }
+    }
+  }
+  .eager {
+    color: #ffffff;
+    .btn {
+      background-color: rgb(255, 255, 255);
+      color: #000000;
+      &:hover {
+        background-color: #ff0000 !important;
+      }
+    }
+  }
+  .quiz-container {
+    background-color: white !important;
+    color: #000000;
+    .answer-btn {
+      background-color: red !important;
+      &:hover {
+        background-color: #000000 !important;
+      }
+    }
+  }
+
+  .project {
+    color: #ff0000 !important;
+  }
+  .project-card {
+    background-color: #ff0000 !important;
+    color: white !important;
+  }
+}

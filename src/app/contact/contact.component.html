@@ -1,0 +1,115 @@
+<div class="container my-5 text-center">
+  <img src="../../assets/paper.png" alt="Paper Plane" class="custom-icon" />
+
+  <div class="row eager">
+    <div class="col-md-6 col-12 d-flex justify-content-center mb-3">
+      <p class="mb-4">
+        I'm eager to explore new opportunities and exciting project idea. If
+        you’d like to collaborate or have any suggestions, please feel free to
+        get in touch!
+      </p>
+    </div>
+
+    <div
+      class="social-icons col-md-6 col-12 d-flex justify-content-center mb-3"
+    >
+      <a
+        href="mailto:mahdis.masoumi.sh@gmail.com"
+        target="_blank"
+        class="icon-link"
+      >
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a
+        href="https://github.com/MahdisMasoumi"
+        target="_blank"
+        class="icon-link"
+      >
+        <i class="fab fa-github"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/mahdismasoumi/"
+        target="_blank"
+        class="icon-link"
+      >
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </div>
+  <hr />
+  <div class="row eager">
+    <div class="col-md-6 col-12 d-flex justify-content-center mb-3">
+      <a href="../../assets/resume.pdf" class="btn btn-primary"> My Resume </a>
+    </div>
+    <div class="col-md-6 col-12 d-flex justify-content-center mb-3">
+      <p class="mb-4">
+        If you would like to see my work, click the button below to view my
+        resume.
+      </p>
+    </div>
+  </div>
+  <hr />
+  <div class="quiz-container my-5 text-center">
+    <h3 class="mb-4">Answer the questions to learn more about me!</h3>
+
+    <div id="quiz">
+      <div class="question">
+        <h4>1. What is my favorite programming language?</h4>
+        <button class="answer-btn" (click)="onAnswerClick(false)">C++</button>
+        <button class="answer-btn" (click)="onAnswerClick(true)">
+          JavaScript
+        </button>
+        <button class="answer-btn" (click)="onAnswerClick(false)">Ruby</button>
+      </div>
+      <div id="result" class="mt-4 result">{{ resultMessage }}</div>
+      <div class="question">
+        <h4>2. What framework do I love?</h4>
+        <button class="answer-btn" (click)="onAnswerClick1(true)">
+          Angular
+        </button>
+        <button class="answer-btn" (click)="onAnswerClick1(false)">
+          Django
+        </button>
+        <button class="answer-btn" (click)="onAnswerClick1(false)">
+          Flask
+        </button>
+      </div>
+      <div id="result2" class="mt-4 result">{{ resultMessage1 }}</div>
+      <div class="question">
+        <h4>3. Which database do I prefer?</h4>
+        <button class="answer-btn" (click)="onAnswerClick2(true)">MySQL</button>
+        <button class="answer-btn" (click)="onAnswerClick2(false)">
+          MongoDB
+        </button>
+        <button class="answer-btn" (click)="onAnswerClick2(false)">
+          PostgreSQL
+        </button>
+      </div>
+      <div id="result3" class="mt-4 result">{{ resultMessage2 }}</div>
+
+      <div class="question">
+        <h4>4. Which version control system do I use the most?</h4>
+        <button class="answer-btn" (click)="onAnswerClick3(true)">Git</button>
+        <button class="answer-btn" (click)="onAnswerClick3(false)">
+          Subversion
+        </button>
+        <button class="answer-btn" (click)="onAnswerClick3(false)">
+          Mercurial
+        </button>
+      </div>
+      <div id="result4" class="mt-4 result">{{ resultMessage3 }}</div>
+
+      <div class="question">
+        <h4>5. Which cloud platform am I most familiar with?</h4>
+        <button class="answer-btn" (click)="onAnswerClick4(true)">AWS</button>
+        <button class="answer-btn" (click)="onAnswerClick4(false)">
+          Azure
+        </button>
+        <button class="answer-btn" (click)="onAnswerClick4(false)">
+          Google Cloud
+        </button>
+      </div>
+      <div id="result5" class="mt-4 result">{{ resultMessage4 }}</div>
+    </div>
+  </div>
+</div>

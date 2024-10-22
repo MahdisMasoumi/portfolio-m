@@ -1,0 +1,56 @@
+import { CommonModule } from '@angular/common';
+import { Component, HostListener } from '@angular/core';
+import {
+  Router,
+  RouterLink,
+  RouterLinkActive,
+  RouterOutlet,
+  NavigationEnd,
+} from '@angular/router';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet, CommonModule, RouterLinkActive, RouterLink],
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+})
+export class AppComponent {
+  title = 'My Portfolio';
+  isDarkTheme: boolean = false;
+  isNavbarOpen: boolean = false;
+  showScrollBtn: boolean = false;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.showScrollBtn = window.scrollY > 20;
+  }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  constructor(private router: Router) {}
+
+  toggleTheme() {
+    this.isDarkTheme = !this.isDarkTheme;
+    const body = document.body;
+
+    if (this.isDarkTheme) {
+      body.classList.add('dark-theme');
+      body.classList.remove('light-theme');
+      console.log('Dark theme applied');
+    } else {
+      body.classList.remove('dark-theme');
+      body.classList.add('light-theme');
+      console.log('Light theme applied');
+    }
+  }
+
+  toggleNavbar() {
+    this.isNavbarOpen = !this.isNavbarOpen; // Toggle the navbar open state
+  }
+
+  closeNavbar() {
+    this.isNavbarOpen = false; // Close the navbar
+  }
+}

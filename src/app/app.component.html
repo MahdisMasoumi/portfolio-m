@@ -1,0 +1,69 @@
+<header class="container-fluid py-3 border-bottom">
+  <div
+    class="container d-flex justify-content-center align-items-center position-relative"
+  >
+    <!-- Centered name and theme button -->
+    <a
+      class="navbar-brand mahdis"
+      routerLink="/about"
+      routerLinkActive="active"
+    >
+      Mahdis Masoumi
+    </a>
+    <button class="btn btn-outline-dark mx-2" (click)="toggleTheme()">
+      <i
+        class="fas"
+        [ngClass]="{
+          'fa-tree': isDarkTheme,
+          'fa-skull': !isDarkTheme,
+          'icon-dark': isDarkTheme,
+          'icon-light': !isDarkTheme
+        }"
+      ></i>
+    </button>
+
+    <!-- Navbar toggler button -->
+    <button
+      class="navbar-toggler d-lg-none position-absolute end-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+  <nav class="navbar navbar-expand-lg">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about" routerLinkActive="active"
+            >About</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/projects" routerLinkActive="active"
+            >Projects</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact" routerLinkActive="active"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<router-outlet></router-outlet>
+
+<button
+  *ngIf="showScrollBtn"
+  (click)="scrollToTop()"
+  class="btn btn-primary"
+  style="position: fixed; bottom: 20px; right: 20px"
+>
+  <i class="fas fa-chevron-up"></i>
+</button>

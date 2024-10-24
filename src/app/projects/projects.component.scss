@@ -1,7 +1,7 @@
 .section {
-  opacity: 1; /* Start hidden */
-  transform: translateY(3rem); /* Slightly move down */
-  transition: opacity 1s ease-out, transform 0.6s ease-out; /* Smooth transition */
+  opacity: 1;
+  transform: translateY(3rem);
+  transition: opacity 1s ease-out, transform 0.6s ease-out;
 }
 
 .section--hidden {
@@ -39,40 +39,16 @@
 .project-list {
   display: flex;
   flex-direction: column;
-  align-items: center; // Center the cards horizontally
-}
-.a {
-  background-color: #c297cb;
-}
-.b {
-  background-color: #4a74b9;
-  animation: moveInBottom 1s ease-out;
-}
-.c {
-  background-color: #d3fbd8;
-}
-
-.d {
-  background-color: #e4e5b7;
-}
-.e {
-  background-color: #e0f1ff;
-}
-.g {
-  background-color: #ffffb8;
-}
-.f {
-  background-color: #f6f8ff;
-}
-.h {
-  background-color: #6baeaf;
+  align-items: center;
 }
 
 .project-card {
+  background-color: #dbd9e4;
+
   margin-bottom: 6rem;
   width: 100%;
   max-width: 40rem;
-  box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.6); // Adds a nice shadow effect
+  box-shadow: 10px 20px 20px rgba(114, 90, 104, 0.6);
 
   .card-img-top {
     width: 100%;
@@ -91,20 +67,23 @@
 
   .btn {
     color: rgb(255, 255, 255);
-    background-color: #000000; // Custom button color
+    background-color: #052753;
     border: none;
+    transition: 0.3s ease-out;
   }
 
   .btn:hover {
-    color: rgb(0, 0, 0);
-    background-color: #ffffff; // Darker shade on hover
+    font-weight: bold;
+    color: #052753;
+    background-color: #ffffff;
+    transform: scale(1.1);
   }
 }
 
 .h1 {
   animation: moveInTop 1s ease-out;
   font-family: "Comic Sans MS", sans-serif;
-  color: #3967da;
+  color: #052753;
   letter-spacing: 2px;
   margin-bottom: 3rem;
   font-weight: 600;

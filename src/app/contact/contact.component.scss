@@ -31,14 +31,14 @@
 
   .icon-link {
     text-decoration: none;
-    color: #a09d94;
+    color: #5b828a;
     transition: color 0.3s ease;
     opacity: 0;
     transform: translateY(3rem) rotate(360deg);
     transition: opacity 1s ease-out, transform 1s ease-out;
 
     &:hover {
-      color: #514c43;
+      color: #366663;
     }
   }
   .icon-link:nth-child(1) {
@@ -119,18 +119,18 @@ h1 {
 
 .btn {
   height: 3rem;
-  background-color: #a09d94;
-  border: none;
+  background-color: #5b828a;
+  border: black solid 2px;
   font-size: 18px;
   color: rgb(255, 255, 255);
 
   &:hover {
-    background-color: #514c43;
+    background-color: #366663;
   }
 }
 .quiz-container {
   font-family: "Fira Code", "Monaco", "Consolas";
-  background-color: #f3f2ee;
+  background-color: #f7f7f4;
   border-radius: 10px;
   padding: 25px;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.9);
@@ -140,7 +140,7 @@ h1 {
   h4 {
     font-size: 1.5rem;
     margin-bottom: 1.2rem;
-    color: #333;
+    color: #181717;
   }
 
   .question {
@@ -151,7 +151,7 @@ h1 {
       max-width: 250px;
       margin: 10px auto;
       padding: 12px 25px;
-      background-color: #514c43;
+      background-color: #4f4350;
       color: #fff;
       border: none;
       border-radius: 5px;
@@ -163,7 +163,7 @@ h1 {
       text-align: center;
 
       &:hover {
-        background-color: #2f2b21;
+        background-color: #161615;
         transform: scale(1.1) rotate(1deg);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
       }

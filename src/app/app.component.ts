@@ -7,6 +7,7 @@ import {
   RouterOutlet,
   NavigationEnd,
 } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -29,7 +30,14 @@ export class AppComponent {
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    // Close the navbar whenever navigation ends
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe(() => {
+        this.closeNavbar();
+      });
+  }
 
   toggleTheme() {
     this.isDarkTheme = !this.isDarkTheme;
@@ -47,10 +55,18 @@ export class AppComponent {
   }
 
   toggleNavbar() {
-    this.isNavbarOpen = !this.isNavbarOpen; // Toggle the navbar open state
+    this.isNavbarOpen = !this.isNavbarOpen;
   }
 
   closeNavbar() {
-    this.isNavbarOpen = false; // Close the navbar
+    this.isNavbarOpen = false;
+
+    // Check if window and document are available (i.e., running in the browser)
+    if (typeof document !== 'undefined') {
+      const navbarCollapse = document.getElementById('navbarNav');
+      if (navbarCollapse) {
+        navbarCollapse.classList.remove('show');
+      }
+    }
   }
 }

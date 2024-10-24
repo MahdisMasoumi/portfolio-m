@@ -3,7 +3,7 @@
 
   <div class="row eager">
     <div class="col-md-6 col-12 d-flex justify-content-center mb-3">
-      <p class="mb-4">
+      <p class="mb-4 p">
         I'm eager to explore new opportunities and exciting project idea. If
         you’d like to collaborate or have any suggestions, please feel free to
         get in touch!
@@ -38,10 +38,10 @@
   </div>
   <hr />
   <div class="row eager">
-    <div class="col-md-6 col-12 d-flex justify-content-center mb-3">
+    <div class="col-md-6 col-12 d-flex justify-content-center mb-3 left">
       <a href="../../assets/resume.pdf" class="btn btn-primary"> My Resume </a>
     </div>
-    <div class="col-md-6 col-12 d-flex justify-content-center mb-3">
+    <div class="col-md-6 col-12 d-flex justify-content-center mb-3 right">
       <p class="mb-4">
         If you would like to see my work, click the button below to view my
         resume.
@@ -50,7 +50,7 @@
   </div>
   <hr />
   <div class="quiz-container my-5 text-center">
-    <h3 class="mb-4">Answer the questions to learn more about me!</h3>
+    <h3 class="mb-4">Guess My Tech Favorites!</h3>
 
     <div id="quiz">
       <div class="question">
@@ -60,6 +60,10 @@
           JavaScript
         </button>
         <button class="answer-btn" (click)="onAnswerClick(false)">Ruby</button>
+        <p class="hint">
+          (Hint: Think about flexibility and how the language fits into
+          front-end and back-end development!)
+        </p>
       </div>
       <div id="result" class="mt-4 result">{{ resultMessage }}</div>
       <div class="question">
@@ -73,6 +77,10 @@
         <button class="answer-btn" (click)="onAnswerClick1(false)">
           Flask
         </button>
+        <p class="hint">
+          (Hint: It’s robust, great for large-scale applications, and I love its
+          modularity!)
+        </p>
       </div>
       <div id="result2" class="mt-4 result">{{ resultMessage1 }}</div>
       <div class="question">
@@ -84,6 +92,10 @@
         <button class="answer-btn" (click)="onAnswerClick2(false)">
           PostgreSQL
         </button>
+        <p class="hint">
+          (Hint: I like databases that balance speed, scalability, and
+          structure!)
+        </p>
       </div>
       <div id="result3" class="mt-4 result">{{ resultMessage2 }}</div>
 
@@ -96,6 +108,9 @@
         <button class="answer-btn" (click)="onAnswerClick3(false)">
           Mercurial
         </button>
+        <p class="hint">
+          (Hint: This is the most widely used system by developers globally!)
+        </p>
       </div>
       <div id="result4" class="mt-4 result">{{ resultMessage3 }}</div>
 
@@ -108,6 +123,10 @@
         <button class="answer-btn" (click)="onAnswerClick4(false)">
           Google Cloud
         </button>
+        <p class="hint">
+          (Hint: It’s the industry leader, offering a wide range of services
+          that I’ve used for different projects!)
+        </p>
       </div>
       <div id="result5" class="mt-4 result">{{ resultMessage4 }}</div>
     </div>

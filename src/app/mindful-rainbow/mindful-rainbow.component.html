@@ -1,0 +1,126 @@
+<div class="container mindful-rainbow">
+  <h1 class="text-center mt-4">{{ projectTitle }}</h1>
+  <h2 class="text-center">{{ tagline }}</h2>
+  <p>{{ projectDescription }}</p>
+
+  <div class="log">
+    <img src="../../assets/log.png" alt="Project Logo" class="img-fluid" />
+  </div>
+
+  <h2 class="mt-4">Understanding User Needs</h2>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let userNeed of userNeeds">
+      {{ userNeed }}
+    </li>
+  </ul>
+
+  <!-- Features Section -->
+  <h2 class="mt-4">Key Features</h2>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let feature of keyFeatures">
+      <strong>{{ feature.title }}</strong
+      >: {{ feature.description }}
+    </li>
+  </ul>
+  <div id="features" class="row mb-5">
+    <h1 class="text-center mb-4">Mood Tracker</h1>
+    <div class="col-md-6 mock">
+      <h2 class="text-center">Mock Image</h2>
+      <img
+        src="../../assets/Mood Tracking.png"
+        alt="Mock Image"
+        class="img-fluid mock-image"
+      />
+    </div>
+    <div class="col-md-6">
+      <h2 class="text-center">Demo Video</h2>
+      <div class="video-container">
+        <video src="../../assets/moodtracking.mp4" controls>
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <div id="features" class="row mb-5">
+    <h1 class="text-center mb-4">Rainbow Rays</h1>
+    <div class="col-md-6 mock">
+      <h2 class="text-center">Mock Image</h2>
+      <img
+        src="../../assets/rainbowrays.png"
+        alt="Mock Image"
+        class="img-fluid mock-image"
+      />
+    </div>
+    <div class="col-md-6">
+      <h2 class="text-center">Demo Video</h2>
+      <div class="video-container">
+        <video src="../../assets/rainbowrays.mp4" controls>
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <div id="features" class="row mb-5">
+    <h1 class="text-center mb-4">Rainbow Goals</h1>
+    <div class="col-md-6 mock">
+      <h2 class="text-center">Mock Image</h2>
+      <img
+        src="../../assets/goals.png"
+        alt="Mock Image"
+        class="img-fluid mock-image"
+      />
+    </div>
+    <div class="col-md-6">
+      <h2 class="text-center">Demo Video</h2>
+      <div class="video-container">
+        <video src="../../assets/goals.mp4" controls>
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <div id="features" class="row mb-5">
+    <h1 class="text-center mb-4">Therapy Tracker</h1>
+    <div class="col-md-6 mock">
+      <h2 class="text-center">Mock Image</h2>
+      <img
+        src="../../assets/therapy.png"
+        alt="Mock Image"
+        class="img-fluid mock-image"
+      />
+    </div>
+    <div class="col-md-6">
+      <h2 class="text-center">Demo Video</h2>
+      <div class="video-container">
+        <video src="../../assets/therapy.mp4" controls>
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="mt-4">User Feedback & Iterations</h2>
+  <p>{{ feedbackDescription }}</p>
+
+  <h2 class="mt-4">Challenges & Solutions</h2>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let challenge of challenges">
+      <strong>Challenge:</strong> {{ challenge.challenge }}<br />
+      <strong>Solution:</strong> {{ challenge.solution }}
+    </li>
+  </ul>
+  <div class="text-center mb-4">
+    <a
+      href="https://github.com/MahdisMasoumi/MindfulRainbow"
+      target="_blank"
+      class="btn"
+    >
+      Code
+    </a>
+  </div>
+  <h2 class="mt-4">Conclusion</h2>
+  <p>{{ conclusion }}</p>
+</div>

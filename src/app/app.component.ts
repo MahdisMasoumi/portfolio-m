@@ -31,7 +31,6 @@ export class AppComponent {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
   constructor(private router: Router) {
-    // Close the navbar whenever navigation ends
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(() => {
@@ -61,7 +60,6 @@ export class AppComponent {
   closeNavbar() {
     this.isNavbarOpen = false;
 
-    // Check if window and document are available (i.e., running in the browser)
     if (typeof document !== 'undefined') {
       const navbarCollapse = document.getElementById('navbarNav');
       if (navbarCollapse) {

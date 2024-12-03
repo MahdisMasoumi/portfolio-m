@@ -44,14 +44,13 @@
 
 .project-card {
   background-color: #dbd9e4;
-
   margin-bottom: 6rem;
   width: 100%;
   max-width: 40rem;
   box-shadow: 10px 20px 20px rgba(114, 90, 104, 0.6);
 
   .card-img-top {
-    width: 100%;
+    padding: 2rem 3rem;
     height: 23rem;
     @media (max-width: 768px) {
       height: 15rem;

@@ -9,16 +9,15 @@ import { IntersectionObserverService } from '../intersection-observer.service';
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
-export class ProjectsComponent implements AfterViewInit {
-  constructor(
-    private intersectionObserverService: IntersectionObserverService,
-    @Inject(PLATFORM_ID) private platformId: Object
-  ) {}
-
-  ngAfterViewInit() {
-    if (isPlatformBrowser(this.platformId)) {
-      const allSections = document.querySelectorAll('.section');
-      this.intersectionObserverService.initObserver(allSections);
-    }
-  }
+export class ProjectsComponent {
+  // constructor(
+  //   private intersectionObserverService: IntersectionObserverService,
+  //   @Inject(PLATFORM_ID) private platformId: Object
+  // ) {}
+  // ngAfterViewInit() {
+  //   if (isPlatformBrowser(this.platformId)) {
+  //     const allSections = document.querySelectorAll('.section');
+  //     this.intersectionObserverService.initObserver(allSections);
+  //   }
+  // }
 }
